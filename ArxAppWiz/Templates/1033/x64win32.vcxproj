@@ -33,6 +33,7 @@
 		<CLRSupport>[!output ARX_CLR_SUPPORT]</CLRSupport>
 		<UseOfMfc>[!output ARX_MFC_SUPPORT]</UseOfMfc>
 		<UseOfAtl>[!output ARX_ATL_SUPPORT]</UseOfAtl>
+		<PlatformToolset>v110</PlatformToolset>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
 		<UseDebugLibraries>false</UseDebugLibraries>
@@ -54,11 +55,12 @@
 
 	<ImportGroup Label="PropertySheets">
 		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-		<Import Project="Autodesk.arx-2014.props" />
+		<Import Project="Autodesk.arx-2016.props" />
 	</ImportGroup>
 	<PropertyGroup Label="Configuration">
 		<PlatformToolset Condition="'$(ArxSDKPlatform)'=='v90'">v90</PlatformToolset>
 		<PlatformToolset Condition="'$(ArxSDKPlatform)'=='v100'">v100</PlatformToolset>
+		<PlatformToolset Condition="'$(ArxSDKPlatform)'=='v110'">v110</PlatformToolset>
 	</PropertyGroup>
 	
 	<PropertyGroup Label="UserMacros" />
